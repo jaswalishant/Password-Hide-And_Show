@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="password" class="password" placeholder="password">
+            <span  id="s" class="hide"  onclick="hs()" ></span>
+        </div>
+    </div>
+
+    <script>
+        let pass=document.getElementsByClassName('password')[0];
+        let show=document.querySelector('#s');
+        let a=true;
+        function hs(){
+            if(pass.type==='password'){
+            pass.setAttribute('type', 'text');
+            show.classList.toggle('show')
+            a=false;
+            }
+            else{
+                pass.setAttribute('type','password');
+                show.classList.toggle('show');
+                a=true;
+            }
+        }
+    </script>
+</body>
+</html>
